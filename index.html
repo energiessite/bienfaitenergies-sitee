@@ -5,17 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienfait Energies</title>
     <style>
-        /* Application de l'image de fond sur toute la page */
-        body {
+/* Application de l'image de fond sur toute la page */
+body {
     background-image: url('fomm.jpeg'); /* Chemin vers votre image */
     background-size: cover; /* L'image couvre toute la page */
     background-position: center; /* Centre l'image sur la page */
     background-repeat: no-repeat; /* Empêche l'image de se répéter */
-    background-attachment: fixed; /* Fixe l'image en arrière-plan pour qu'elle ne bouge pas */
     margin: 0; /* Retirer les marges par défaut */
     padding: 0; /* Retirer les paddings par défaut */
     height: 100vh; /* Assure que la hauteur du fond est égale à celle de la fenêtre */
 }
+
+/* Fixe le fond sur les appareils de bureau */
+@media (min-width: 768px) {
+    body {
+        background-attachment: fixed; /* Fixe l'image en arrière-plan pour qu'elle ne bouge pas */
+    }
+}
+
+/* Pour les petits écrans comme les téléphones, on ne fixe pas le fond pour éviter des problèmes de performance */
+@media (max-width: 767px) {
+    body {
+        background-attachment: scroll; /* Permet à l'image de se déplacer normalement */
+    }
+}
+
 
 
 /* Style pour le conteneur header */
