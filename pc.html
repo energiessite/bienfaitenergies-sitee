@@ -532,5 +532,14 @@
 
         window.onload = typeWriter;
     </script>
+        <script>
+    // Fonction pour naviguer vers une section spécifique
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+</script>
 </body>
 </html>
