@@ -611,14 +611,13 @@ body {
     text-align: left;
     color: white;
 }
-
 /* Conteneur principal */
 .contact {
     text-align: center;
-    max-width: 400px; /* Réduit la largeur maximale pour les écrans de téléphone */
+    max-width: 360px; /* Réduit encore la largeur pour les écrans mobiles */
     margin: 20px auto;
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 10px; /* Réduit le padding pour maximiser l'espace */
+    padding: 8px; /* Réduit le padding */
     border-radius: 10px;
     color: white;
 }
@@ -627,7 +626,7 @@ body {
 .contact-icons {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
-    gap: 10px; /* Réduit l'espace entre les éléments */
+    gap: 8px; /* Réduit encore l'espace entre les éléments */
     justify-items: center; /* Centre les éléments dans chaque colonne */
 }
 
@@ -636,32 +635,32 @@ body {
     text-align: center;
 }
 
-/* Taille réduite des icônes */
+/* Taille ultra réduite des icônes */
 .contact-item img {
-    width: 2cm;  /* Taille d'icône beaucoup plus petite */
-    height: 2cm; /* Taille d'icône plus petite */
+    width: 1.5cm;  /* Réduit à une taille plus petite encore */
+    height: 1.5cm; /* Taille d'icône encore plus petite */
     border-radius: 5px;
 }
 
 /* Style du texte sous les icônes */
 .contact-item p {
-    margin-top: 5px; /* Réduit l'espace sous l'icône */
-    font-size: 12px; /* Réduit la taille du texte */
+    margin-top: 5px; /* Espace réduit sous l'icône */
+    font-size: 10px; /* Réduit la taille du texte pour les petits écrans */
 }
 
-/* Pour les écrans très petits, passez à une seule colonne */
-@media (max-width: 400px) {
+/* Pour les petits écrans, comme les très petits téléphones */
+@media (max-width: 320px) {
     .contact-icons {
-        grid-template-columns: 1fr; /* Une seule colonne */
+        grid-template-columns: 1fr; /* Une seule colonne pour les écrans très petits */
     }
 
     .contact-item img {
-        width: 1.5cm;  /* Réduit encore la taille des icônes */
-        height: 1.5cm;
+        width: 1.2cm;  /* Taille encore plus petite pour les très petits écrans */
+        height: 1.2cm;
     }
 
     .contact-item p {
-        font-size: 10px; /* Réduit encore la taille du texte pour les petits écrans */
+        font-size: 8px; /* Texte plus petit */
     }
 }
 
