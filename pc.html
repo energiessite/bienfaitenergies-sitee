@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienfait Energies</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('fonnn.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+        #chauffage div:last-child {
+    text-align: justify;
+}
+#ventilation div:last-child {
+    text-align: justify;
+}
+#climatisationdiv:last-child {
+    text-align: justify;
+}
+
+        h1 {
+            font-size: 3.5em;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10vh;
+        }
+
+        .logo {
+            width: 120px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        .intro {
+            text-align: center;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            font-size: 1.2em;
+            height: 100px;
+            overflow: hidden;
+        }
+        /* Centrage des boutons */
+        #navigation-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 30px; /* Espace entre le titre et les sections */
+}
+
+/* Style des boutons */
+#navigation-buttons button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    margin: 0 5px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#navigation-buttons button:hover {
+    background-color: #444;
+}
+        section {
+            padding: 20px;
+            margin: 20px 10%;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #f2a10c;
+            font-family: 'Lucida Console', Courier, monospace;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        section h3 {
+            font-size: 1.5em;
+            margin-top: 20px;
+            color: #dcdcdc;
+        }
+
+        section p {
+            font-size: 1.1em;
+            line-height: 1.8em;
+        }
+
+        .left {
+            margin-left: 10%;
+        }
+
+        .center {
+            margin: 0 auto;
+        }
+
+        .right {
+            margin-left: auto;
+            margin-right: 10%;
+        }
+
+        footer {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 1em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+        .contact {
+            text-align: center;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-icons img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+
+        .contact-icons img:hover {
+            transform: scale(1.2);
+        }
+
+        .contact-icons a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .contact-icons a span {
+            display: block;
+            margin-top: 5px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<script src="bienf.js"></script>
+
+<body>
+    <div class="header">
+        <h1>Bienfait Energies</h1>
+        <img class="logo" src="logo.jpeg" alt="Logo">
+    </div>
+
+    <a href="./choix.html" style="display: block; text-align: center; margin-top: 20px; color: blue; text-decoration: underline;">
+        Revenir au choix
+    </a>
+    
+
+    <div class="intro" id="intro">
+        <!-- L'introduction sera remplie progressivement par JavaScript -->
+    </div>
+
+
+    
+
+    <div id="navigation-buttons">
+        <button onclick="scrollToSection('chauffage')">Chauffage</button>
+        <button onclick="scrollToSection('adoucisseur')">Adoucisseur</button>
+        <button onclick="scrollToSection('electricite')">Électricité</button>
+        <button onclick="scrollToSection('ventilation')">Ventilation</button>
+        <button onclick="scrollToSection('climatisation')">Climatisation</button>
+        <button onclick="scrollToSection('maintenance')">Maintenance après installation</button>
+        <button onclick="scrollToSection('solar-installation')">Installation de panneaux solaires</button>
+    </div>
+    
+    <section id="chauffage" style="max-width: 800px; margin: 20px auto; background-color: rgba(0, 0, 0, 0.6); padding: 20px; border-radius: 10px; display: flex; align-items: center; margin-left: 10%; margin-right: 10%;">
+        <div style="flex: 1; margin-right: 20px;">
+            <img src="cof.jpg" alt="Image Chauffage" style="width: 100%; height: auto; max-width: 300px; border-radius: 10px;">
+        </div>
+        <div style="flex: 2;">
+            <h2>Chauffage</h2>
+            <h3>Solutions modernes</h3>
+            <p>
+                Découvrez des systèmes de chauffage modernes et économiques adaptés à vos besoins. 
+                Profitez d’une technologie fiable et performante pour votre confort quotidien. Que vous
+                soyez à la recherche d'une solution pour un nouveau projet ou pour remplacer un système
+                existant, nous vous offrons des options personnalisées, durables et éco-responsables. 
+                Nous sommes là pour vous guider dans vos choix et vous garantir une installation
+                optimale, répondant à vos attentes en termes de confort et d'efficacité énergétique. 
+                Avec Bienfait Energies, faites le choix de la qualité et de la tranquillité d'esprit
+                pour les années à venir.
+            </p>
+        </div>
+    </section>
+    
+    <section id="adoucisseur" style="max-width: 800px; margin: 20px auto; margin-left: 12cm; background-color: rgba(0, 0, 0, 0.6); padding: 20px; border-radius: 10px; color: white; display: flex; flex-direction: column; align-items: flex-end; gap: 20px;">
+        <!-- Texte à droite -->
+        <div style="flex: 1; text-align: justify; align-self: flex-end; margin-right: 5%;">
+            <h2>Adoucisseurs sans sel : une solution écologique contre le calcaire</h2>
+            <p>
+                Les adoucisseurs sans sel sont une alternative innovante et écologique pour lutter contre le calcaire dans vos installations 
+                 et préservent les minéraux essentiels de l'eau. 
+                Idéal pour protéger vos équipements ménagers et améliorer la qualité de l'eau.
+                Faites le choix d'une eau plus douce.
+            </p>
+        </div>
+        <!-- Images en dessous -->
+        <div style="display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap; margin-right: 5%;">
+            <img src="adou.jpeg" alt="Adoucisseur 3" style="width: 30%; height: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
+            <img src="ad.jpeg" alt="Adoucisseur 1" style="width: 30%; height: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
+            <img src="ado.jpeg" alt="Adoucisseur 2" style="width: 30%; height: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
+            
+        </div>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    <section id="electricite" style="max-width: 1000px; margin: 20px auto; margin-left: 3cm; background-color: rgba(0, 0, 0, 0.6); padding: 20px; border-radius: 10px; display: flex; align-items: flex-start;">
+        <!-- Image à gauche -->
+        <div style="flex: 1; margin-right: 30px;">
+            <img src="ele.jpeg" alt="Image Électricité gauche" style="width: 100%; height: auto; max-width: 200px; border-radius: 10px;">
+        </div>
+        
+        <!-- Texte -->
+        <div style="flex: 3; text-align: justify;">
+            <h2>Électricité</h2>
+            <h3>Installations sécurisées</h3>
+            <p>
+                Bienfait Energies propose des installations électriques conformes et sécurisées, adaptées à vos projets résidentiels ou professionnels. 
+                Nous mettons un point d'honneur à assurer la fiabilité et la sécurité de vos circuits électriques, tout en optimisant votre consommation énergétique.
+                Nous fournissons des solutions modernes qui répondent à toutes vos exigences.
+            </p>
+        </div>
+        
+        <!-- Image à droite -->
+        <div style="flex: 1; margin-left: 30px;">
+            <img src="elec.jpeg" alt="Image Électricité droite" style="width: 100%; height: auto; max-width: 200px; border-radius: 10px;">
+        </div>
+    </section>
+    
+    
+    
+    
+    
+    
+
+    <section id="ventilation" style="margin: 20px auto 20px auto; padding: 20px; background-color: rgba(0, 0, 0, 0.6); border-radius: 10px; max-width: 800px; margin-left: auto; margin-right: 10%;">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+            <img src="ven.jpeg" alt="Ventilation gauche" style="width: 200px; height: auto; border-radius: 10px;">
+            <div style="flex-grow: 1; margin: 0 20px;">
+                <h2>Ventilation</h2>
+                <h3>Confort et qualité d'air</h3>
+                <p>
+                    Respirez un air sain grâce à nos solutions de ventilation performantes. 
+                    Maintenez une qualité de l’air optimale dans votre habitat. Bienfait Energies garantit un renouvellement d’air efficace et économique.
+                </p>
+            </div>
+            <img src="vent.jpeg" alt="Ventilation droite" style="width: 200px; height: auto; border-radius: 10px;">
+        </div>
+    </section>
+    
+    
+    
+
+    <section id="climatisation" style="display: flex; align-items: center; margin: 20px auto; max-width: 1000px; background-color: rgba(0, 0, 0, 0.6); border-radius: 10px; padding: 20px;">
+        <!-- Texte à gauche -->
+        <div style="flex: 2; margin-left: 10%; margin-right: 20px;">
+            <h2>Climatisation</h2>
+            <h3>Confort en toutes saisons</h3>
+            <p>
+                Profitez d’un confort optimal en été comme en hiver grâce à nos solutions de climatisation. 
+                Bienfait Energies vous accompagne pour installer un système performant, silencieux et éco-responsable, 
+                parfaitement adapté à vos besoins et à votre espace.
+            </p>
+        </div>
+        <!-- Image à droite -->
+        <div style="flex: 1;">
+            <img src="clim.jpeg" alt="Climatisation" style="width: 100%; height: auto; max-width: 300px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
+        </div>
+    </section>
+    
+    <section id="maintenance" style="display: flex; align-items: flex-start; margin-bottom: 50px; background-color: rgba(0, 0, 0, 0.6); border-radius: 10px; padding: 20px; max-width: 900px;">
+        <!-- Texte principal à gauche -->
+        <div style="flex: 2; margin-right: 20px;">
+            <h2>Maintenance après installation</h2>
+            <h3>Service réactif</h3>
+            <p>
+                Bienfait Energies s'engage à intervenir rapidement pour résoudre vos problèmes techniques
+                et assurer une réparation efficace.
+            </p>
+            <h3>Entretien régulier</h3>
+            <p>
+                Prolongez la durée de vie de vos équipements grâce à notre service d’entretien régulier. 
+                Nous vérifions vos installations pour garantir leur fonctionnement optimal et prévenir les pannes futures.
+            </p>
+        </div>
+        <!-- Image à droite -->
+        <div style="flex: 1; display: flex; flex-direction: column; align-items: flex-start;">
+            <img src="mane.jpeg" alt="Maintenance après dépannage" 
+                 style="width: 100%; max-width: 300px; height: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
+        </div>
+    </section>
+
+    
+    
+    
+    <section id="solar-installation" style="margin: 20px auto; padding: 20px; background-color: rgba(0, 0, 0, 0.6); border-radius: 10px; max-width: 1000px; color: white;"> 
+        <!-- Texte explicatif -->
+        <div style="text-align: justify; margin-bottom: 20px;">
+            <h2>Installation de panneaux solaires</h2>
+            <p>
+                Chez Bienfait Energies, nous proposons des solutions adaptées pour installer des panneaux solaires
+                afin de réduire vos factures d'énergie et contribuer à un avenir durable. Nos experts vous accompagnent
+                dans le choix et l'installation des équipements les plus performants pour votre domicile.
+            </p>
+            <p>
+                Grâce à notre calculette, estimez facilement la rentabilité de vos panneaux solaires ! Choisissez la puissance 
+                des panneaux, indiquez votre tarif du kWh, et découvrez vos économies ainsi que votre impact positif 
+                sur l’environnement en termes de réduction de CO₂.
+            </p>
+        </div>
+    
+        <!-- Conteneur principal -->
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 20px;">
+            <!-- Image à gauche -->
+            <img src="pano.jpeg" alt="Image de panneaux solaires à gauche" 
+                 style="width: 25%; height: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
+    
+            <!-- Calculette au centre -->
+            <div id="solar-calculator" style="flex: 1; background-color: black; color: white; padding: 20px; border-radius: 10px; text-align: center; max-width: 300px; margin: auto;">
+                <!-- Titre avec image -->
+                <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px; gap: 10px;">
+                    <img src="https://www.pinclipart.com/picdir/middle/74-743387_attention-panneau-de-signalisation-attention-clipart.png" alt="Attention" style="width: 30px; height: auto;">
+                    <h3 style="color: orange; margin: 0;">ESTIMATION !!</h3>
+                </div>
+    
+                <h3>Calculette de rentabilité</h3>
+                <form id="calculator-form" style="display: flex; flex-direction: column; gap: 10px;">
+                    <!-- Type de panneau -->
+                    <label for="panel-type">Type de panneau :</label>
+                    <select id="panel-type" style="padding: 5px;">
+                        <option value="100">100W</option>
+                        <option value="435">435W</option>
+                    </select>
+    
+                    <!-- Nombre de panneaux -->
+                    <label for="panel-count">Nombre de panneaux :</label>
+                    <input type="number" id="panel-count" value="1" min="1" style="padding: 5px;">
+    
+                    <!-- Prix du kWh -->
+                    <label for="price-kwh">Prix du kWh (€) :</label>
+                    <input type="number" id="price-kwh" value="0.17" min="0" step="0.01" style="padding: 5px;">
+    
+                    <!-- Période -->
+                    <label for="period">Période :</label>
+                    <select id="period" style="padding: 5px;">
+                        <option value="day">Jour</option>
+                        <option value="week">Semaine</option>
+                        <option value="month">Mois</option>
+                    </select>
+    
+                    <!-- Saison -->
+                    <label for="season">Saison :</label>
+                    <select id="season" style="padding: 5px;">
+                        <option value="summer">Été</option>
+                        <option value="winter">Hiver</option>
+                        <option value="spring">Printemps</option>
+                        <option value="autumn">Automne</option>
+                    </select>
+    
+                    <!-- Bouton calculer -->
+                    <button type="button" onclick="calculateProfit()" style="padding: 10px; background-color: orange; color: black; border: none; border-radius: 5px; cursor: pointer;">Calculer</button>
+                </form>
+    
+                <!-- Résultats -->
+                <div id="result" style="margin-top: 20px; text-align: left; color: white;"></div>
+            </div>
+    
+            <!-- Image à droite -->
+            <img src="panl.jpeg" alt="Image de panneaux solaires à droite" 
+                 style="width: 25%; height: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
+        </div>
+    </section>
+    
+    <script>
+        function calculateProfit() {
+            const panelType = parseInt(document.getElementById('panel-type').value);
+            const panelCount = parseInt(document.getElementById('panel-count').value);
+            const priceKwh = parseFloat(document.getElementById('price-kwh').value);
+            const period = document.getElementById('period').value;
+            const season = document.getElementById('season').value;
+    
+            if (isNaN(priceKwh) || priceKwh <= 0 || isNaN(panelCount) || panelCount <= 0) {
+                document.getElementById('result').innerHTML = "Veuillez entrer des valeurs valides.";
+                return;
+            }
+    
+            // Rendement des panneaux par saison (heures de production par jour)
+            const seasonEfficiency = {
+                summer: 6,
+                winter: 2,
+                spring: 4,
+                autumn: 3
+            };
+    
+            // Multiplicateur pour les périodes
+            const periodMultiplier = {
+                day: 1,
+                week: 7,
+                month: 30
+            };
+    
+            const hoursPerDay = seasonEfficiency[season];
+            const totalPower = panelType * panelCount * hoursPerDay; // Puissance totale en Wh/jour
+            const savings = (totalPower / 1000) * priceKwh * periodMultiplier[period]; // Économies en €
+            const co2Saved = (totalPower / 1000) * periodMultiplier[period] * 0.5; // Réduction CO2 (kg)
+    
+            // Résultats
+            document.getElementById('result').innerHTML = `
+                <p>Économies estimées : <strong style="color: orange;">${savings.toFixed(2)} €</strong></p>
+                <p>Réduction de CO₂ : <strong style="color: orange;">${co2Saved.toFixed(2)} kg</strong></p>
+            `;
+        }
+    </script>
+
+    
+    
+    
+    
+
+    <div class="contact">
+        <h2>Contactez-nous</h2>
+        <div class="contact-icons">
+            <div>
+                <a href="tel:+0487077948" target="_blank">
+                    <img src="https://img.freepik.com/premium-vector/phone-call-icon-vector-illustration-design-telephone_373520-4523.jpg?w=1380" alt="Téléphone">
+                    <span>Appeler</span>
+                </a>
+                <p>0486804407</p>
+            </div>
+            <div>
+                <a href="mailto:bienfaitenergie@gmail.com" target="_blank">
+                    <img src="https://logos-download.com/wp-content/uploads/2016/05/Gmail_logo_icon-700x531.png" alt="Mail">
+                    <span>Email</span>
+                </a>
+                <p>bienfait.energies@gmail.com</p>
+            </div>
+            <div>
+                <a href="https://www.instagram.com/bienfaitenergies" target="_blank">
+                    <img src="https://www.edigitalagency.com.au/wp-content/uploads/new-Instagram-icon-png-full-colour.png" alt="Instagram">
+                    <span>Instagram</span>
+                </a>
+                <p>Bienfait Energies</p>
+            </div>
+            <div>
+                <a href="https://www.facebook.com/bienfaitenergies" target="_blank">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/06/09/54/facebook-1802605__480.png" alt="Facebook">
+                    <span>Facebook</span>
+                </a>
+                <p>Bienfait Energies</p>
+            </div>
+        </div>
+    </div>
+    <footer style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+        <img src="logo.jpeg" alt="Logo" style="width: 50px; height: auto; border-radius: 5px;">
+        <span>&copy; 2024 Bienfait Energies. Tous droits réservés. Créateur web: Rémi Siringo</span>
+    </footer>
+    
+    
+    </div>
+    <script>
+        const introText = "Bienvenue sur le site de Bienfait Energies, votre partenaire pour des solutions durables et innovantes. Que ce soit pour votre confort thermique, la production d'énergie solaire, ou l'amélioration de la qualité de l'air, nous sommes là pour vous accompagner.";
+
+        const introElement = document.getElementById('intro');
+        let index = 0;
+
+        function typeWriter() {
+            if (index < introText.length) {
+                introElement.textContent += introText.charAt(index);
+                index++;
+                setTimeout(typeWriter, 50);
+            }
+        }
+
+        window.onload = typeWriter;
+    </script>
+</body>
+</html>
