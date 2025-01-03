@@ -611,40 +611,59 @@ body {
     text-align: left;
     color: white;
 }
+
+/* Conteneur principal */
 .contact {
     text-align: center;
-    max-width: 800px;
+    max-width: 400px; /* Réduit la largeur maximale pour les écrans de téléphone */
     margin: 20px auto;
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 20px;
+    padding: 10px; /* Réduit le padding pour maximiser l'espace */
     border-radius: 10px;
     color: white;
 }
 
+/* Conteneur des icônes de contact */
 .contact-icons {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+    gap: 10px; /* Réduit l'espace entre les éléments */
+    justify-items: center; /* Centre les éléments dans chaque colonne */
 }
 
+/* Chaque élément de contact */
 .contact-item {
-    flex: 1;
     text-align: center;
 }
 
+/* Taille réduite des icônes */
 .contact-item img {
-    width: 1.5cm;
-    height: 1.5cm;
+    width: 2cm;  /* Taille d'icône beaucoup plus petite */
+    height: 2cm; /* Taille d'icône plus petite */
     border-radius: 5px;
 }
 
+/* Style du texte sous les icônes */
 .contact-item p {
-    margin-top: 10px;
-    font-size: 16px;
+    margin-top: 5px; /* Réduit l'espace sous l'icône */
+    font-size: 12px; /* Réduit la taille du texte */
 }
 
+/* Pour les écrans très petits, passez à une seule colonne */
+@media (max-width: 400px) {
+    .contact-icons {
+        grid-template-columns: 1fr; /* Une seule colonne */
+    }
 
+    .contact-item img {
+        width: 1.5cm;  /* Réduit encore la taille des icônes */
+        height: 1.5cm;
+    }
+
+    .contact-item p {
+        font-size: 10px; /* Réduit encore la taille du texte pour les petits écrans */
+    }
+}
 
 
         </style>
