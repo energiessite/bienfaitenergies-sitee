@@ -56,6 +56,25 @@ body {
     border-radius: 50%; /* Rond parfait */
     object-fit: cover; /* Garde les proportions */
 }
+.btn-retour {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-retour:hover {
+    background-color: black;
+    color: white;
+}
 
 /* Style pour l'introduction entière */
 .intro {
@@ -645,7 +664,8 @@ body {
         </div>
     
     
-        
+        <a href="index.html" class="btn-retour">Retour</a>
+
     
         <div id="navigation-buttons">
             <button onclick="scrollToSection('chauffage')">Chauffage</button>
