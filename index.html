@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienfait Energies</title>
     <style>
-/* Style général pour le body avec l'image de fond */
+/* Style général pour le body avec un fond bleu clair */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: url('fonnn.jpeg') no-repeat center center fixed; /* Image de fond */
-    background-size: cover; /* L'image couvre tout l'écran */
+    background-color: #ADD8E6; /* Bleu clair */
     color: white; /* Couleur du texte par défaut */
 }
 
@@ -21,6 +20,9 @@ body {
     align-items: center; /* Centrer les éléments horizontalement */
     justify-content: center;
     margin-top: 20px; /* Espacement en haut */
+    padding: 20px; /* Espacement autour du contenu */
+    color: white; /* Couleur du texte */
+    text-align: center; /* Centrage du texte */
 }
 
 /* Style pour le titre */
@@ -43,8 +45,8 @@ body {
 
 /* Style pour la section intro */
 .intro {
-    background-color: rgba(0, 0, 0, 0.7); /* Fond sombre avec transparence */
-    color: white;
+    background-color: rgb(212, 242, 242); /* Fond sombre avec transparence */
+    color: rgb(0, 0, 0);
     text-align: center;
     padding: 20px;
     margin: 20px auto;
@@ -58,8 +60,8 @@ body {
 /* Bouton de retour */
 .btn-retour {
     display: inline-block;
-    background-color: #555; /* Gris */
-    color: white;
+    background-color: #ffffff; /* Gris */
+    color: rgb(8, 4, 4);
     text-align: center;
     padding: 5px 10px;
     font-size: 14px;
@@ -72,71 +74,10 @@ body {
 }
 
 .btn-retour:hover {
-    background-color: #444; /* Gris plus foncé au survol */
+    background-color: #ffffff; /* Gris plus foncé au survol */
 }
 
-/* Styles pour le conteneur de l'en-tête */
-.header {
-    display: flex; /* Permet d'aligner le contenu */
-    flex-direction: column; /* Empile le titre et le logo verticalement */
-    align-items: center; /* Centre horizontalement */
-    justify-content: center; /* Centre verticalement */
-    text-align: center; /* Centrage du texte */
-
-    padding: 20px; /* Espacement autour du contenu */
-    color: white; /* Couleur du texte */
-}
-
-/* Style du titre */
-.header h1 {
-    font-size: 2.5em; /* Taille du titre */
-    margin: 10px 0; /* Espacement vertical autour du titre */
-}
-
-/* Style du logo */
-.header .logo {
-    width: 100px; /* Largeur maximale du logo */
-    height: auto; /* Conserve les proportions */
-    margin-top: 10px; /* Espacement au-dessus du logo */
-}
-
-/* Conteneur principal */
-#navigation-buttons {
-    display: grid; /* Utilisation de la grille */
-    grid-template-columns: repeat(3, 1fr); /* Trois colonnes de largeur égale */
-    gap: 20px; /* Espacement entre les colonnes */
-    padding: 10px; /* Marges internes */
-    max-width: 100%; /* Ne dépasse pas la largeur de l'écran */
-    margin: 0 auto; /* Centré horizontalement */
-}
-
-/* Colonnes */
-#navigation-buttons .column {
-    display: flex;
-    flex-direction: column; /* Organise les boutons verticalement */
-    gap: 10px; /* Espacement entre les boutons */
-    align-items: center; /* Centre les boutons horizontalement */
-}
-
-/* Boutons */
-#navigation-buttons button {
-    font-size: 14px; /* Taille du texte */
-    padding: 8px 12px; /* Espacement intérieur */
-    border: 1px solid #c
-
-
-
-    .intro {
-        font-size: 1em; /* Taille réduite */
-        padding: 15px;
-    }
-
-    .btn-retour {
-        font-size: 12px; /* Taille du bouton ajustée */
-        padding: 4px 8px;
-    }
-}
-/* Conteneur des boutons */
+/* Conteneur principal pour les boutons de navigation */
 #navigation-buttons {
     display: flex;
     flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
@@ -147,86 +88,71 @@ body {
 
 /* Style des boutons */
 #navigation-buttons button {
-    background-color: black; /* Couleur de fond noir */
-    color: white; /* Texte blanc */
+    background: none; /* Pas de couleur de fond */
+    color: black; /* Texte noir */
     border: none; /* Pas de bordure */
-    padding: 8px 12px; /* Taille compacte des boutons */
+    padding: 8px 12px; /* Espacement intérieur */
     font-size: 14px; /* Taille de texte lisible */
-    border-radius: 3px; /* Légèrement arrondi */
     cursor: pointer; /* Curseur en forme de main */
-    transition: background-color 0.3s ease; /* Effet de transition au survol */
-    text-align: center; /* Centre le texte dans le bouton */
-    width: fit-content; /* Ajuste la largeur selon le texte */
-    min-width: 120px; /* Largeur minimale pour uniformiser les boutons */
+    text-align: center; /* Centre le texte */
+    text-decoration: none; /* Pas de soulignement par défaut */
+    transition: text-decoration 0.3s ease, box-shadow 0.3s ease; /* Animation fluide pour le soulignement et l'ombre */
+    border-radius: 20px; /* Coins arrondis */
 }
 
-/* Couleur de fond au survol */
+/* Effet au survol des boutons */
 #navigation-buttons button:hover {
-    background-color: #333; /* Gris foncé */
+    text-decoration: underline; /* Soulignement noir au survol */
+    box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.7); /* Ombre blanche autour du bouton */
+}
+
+/* Effet au clic sur les boutons */
+#navigation-buttons button:active {
+    box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.8); /* Ombre plus prononcée au clic */
 }
 
 /* Adaptation pour les petits écrans */
 @media (max-width: 768px) {
     #navigation-buttons button {
         font-size: 12px; /* Réduction de la taille du texte */
-        padding: 6px 10px; /* Taille compacte pour mobile */
-        min-width: 100px; /* Largeur minimale adaptée aux petits écrans */
     }
 }
-/* Réinitialisation des marges et paddings par défaut */
-body, html {
-    margin: 0;
-    padding: 0;
-}
 
-/* Réinitialisation des marges et paddings par défaut */
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-}
 
-/* Réinitialisation des styles par défaut */
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-/* Réinitialisation des styles par défaut */
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-/* Espacement entre les sections */
-section {
-    margin-bottom: 1cm; /* Ajoute 1 cm d'espace entre chaque section */
-}
-
-/* Style Section Chauffage */
+/* Section spécifique pour Chauffage et Adoucisseur */
 #chauffage, #adoucisseur {
     width: 100vw; /* Utilise toute la largeur de la fenêtre */
-    background-color: rgba(0, 0, 0, 0.6); /* Fond sombre */
+    background-color: rgba(255, 255, 255, 1); /* Fond blanc */
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
+    color: rgb(0, 0, 0);
     gap: 20px;
     box-sizing: border-box;
 }
 
-/* Texte */
-#chauffage h2, #adoucisseur h2,
-#chauffage h3, #adoucisseur p {
-    text-align: justify;
+/* Espacement entre Chauffage et Adoucisseur */
+#chauffage {
+    margin-bottom: 1cm; /* Ajoute un espace de 1 cm sous la section Chauffage */
+}
+
+#adoucisseur {
+    margin-top: 1cm; /* Ajoute un espace de 1 cm au-dessus de la section Adoucisseur */
+}
+
+#chauffage h2, #adoucisseur h2 {
+    text-align: center; /* Centre le titre horizontalement */
     margin: 10px 0;
 }
 
-/* Image */
+#chauffage h3, #adoucisseur p {
+    text-align: justify; /* Justifie le texte */
+    margin: 10px 0;
+    width: 95%;
+    display: block;
+}
+
 #chauffage img, #adoucisseur img {
     width: 50%;
     max-width: 400px;
@@ -247,123 +173,348 @@ section {
     }
 }
 
-
-
-
-#adoucisseur {
-    max-width: 800px;
-    margin: 0 auto;
-    margin-bottom: 1cm; /* Ajout d'un espacement de 1 cm en bas */
-    background-color: rgba(0, 0, 0, 0.6);
+/* Section principale */
+#electricite {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1); /* Fond blanc */
     padding: 20px;
-    border-radius: 10px;
-    color: white;
+    color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
     box-sizing: border-box;
 }
 
-#adoucisseur div:first-child {
-    text-align: justify;
-    margin: 0.3cm;
+#electricite .texte {
+    text-align: center;
+    width: 97%; /* Largeur du texte */
 }
 
-#adoucisseur div:last-child {
+#electricite h2, #electricite h3, #electricite p {
+    text-align: justify; /* Justifie le texte */
+    margin: 10px 0;
+}
+
+#electricite .images {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
     justify-content: center;
-    margin: 0.3cm;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
+#electricite .images img {
+    width: 3.5cm; /* Augmentation de la taille des images */
+    height: 3.5cm; /* Augmentation de la hauteur des images */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombre autour des images */
+}
+
+@media (min-width: 768px) {
+    #electricite .images img {
+        width: 3.5cm; /* Applique la même taille sur les écrans larges */
+        height: 3.5cm; /* Applique la même hauteur */
+    }
+}
+
+/* Correction de l'erreur de syntaxe pour le box-shadow dans #adoucisseur */
 #adoucisseur img {
-    width: 40%; /* Augmentation de la largeur des images */
+    width: 40%;
     height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Parenthèse fermée ici */
+}
+
+/* Style pour la section ventilation */
+#ventilation {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1); /* Fond blanc */
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+    margin-top: 1cm; /* Ajoute un espace de 1cm en haut de la section ventilation */
+}
+
+/* Style du texte */
+#ventilation .text-container {
+    text-align: center; /* Centre le texte */
+    width: 97%; /* Largeur du texte */
+}
+
+/* Ajouter un espacement de 1 cm entre tous les éléments de texte */
+#ventilation h2, #ventilation h3, #ventilation p {
+    text-align: justify; /* Justifie le texte */
+    margin-top: 1cm; /* Ajoute un espace de 1cm au-dessus */
+    margin-bottom: 1cm; /* Ajoute un espace de 1cm en dessous */
+}
+
+/* Conteneur des images */
+#ventilation .image-container {
+    display: flex;
+    justify-content: center; /* Centre les images horizontalement */
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* Style des images */
+#ventilation .image-container img {
+    width: 3.5cm; /* Taille des images */
+    height: 3.5cm; /* Taille des images */
+    object-fit: cover; /* Maintien les proportions des images */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombre autour des images */
+}
+
+
+/* Section principale */
+#climatisation {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1); /* Fond sombre */
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 1000px;
+    border-radius: 10px;
+    margin-top: 1cm; /* Espace de 1cm entre la section Ventilation et Climatisation */
+}
+
+/* Conteneur pour le texte */
+.text-container {
+    text-align: center; /* Centre le texte */
+    margin-bottom: 1cm; /* Espace entre le texte et l'image */
+}
+
+/* Titres et paragraphe */
+.text-container h2, .text-container h3, .text-container p {
+    margin: 10px 0;
+}
+
+/* Conteneur pour l'image */
+.image-container {
+    display: flex;
+    justify-content: center; /* Centre l'image horizontalement */
+    width: 100%;
+}
+
+/* Style de l'image */
+.image-container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombre autour de l'image */
+}
+
+
+/* Section principale */
+#maintenance {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1); /* Fond sombre */
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    max-width: 900px;
+    border-radius: 10px;
+    margin-top: 1cm; /* Espace de 1cm par rapport au paragraphe du dessus */
+}
+
+/* Conteneur pour le texte */
+.text-container {
+    width: 80%; /* Largeur du texte */
+    text-align: center; /* Centre le titre principal */
+}
+
+/* Titre principal centré */
+.text-container h2 {
+    text-align: center;
+}
+
+/* Textes justifiés */
+.text-container h3, .text-container p {
+    text-align: justify; /* Justifie le texte */
+    margin: 10px 0;
+}
+
+/* Conteneur pour l'image */
+.image-container {
+    display: flex;
+    justify-content: center; /* Centre l'image horizontalement */
+    width: 100%;
+    margin-top: 1cm; /* Espace entre le texte et l'image */
+}
+
+/* Style de l'image */
+.image-container img {
+    width: 7cm; /* Largeur de l'image */
+    height: 5cm; /* Hauteur de l'image */
+    object-fit: cover; /* Maintien les proportions des images */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombre autour de l'image */
+}
+ 
+
+
+/* Style général de la section */
+#solar-installation {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 1); 
+    border-radius: 10px;
+    max-width: 1000px;
+    color: rgb(0, 0, 0);
+}
+
+/* Conteneur du texte */
+.text-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.text-container h2 {
+    text-align: center;
+}
+
+.text-container p {
+    text-align: justify;
+    margin: 10px 0;
+}
+
+/* Conteneur des images */
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Style des images */
+.image-left, .image-right {
+    width: 3.5cm;
+    height: 3.5cm;
+    object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-
-/* Réinitialisation globale */
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* Réinitialisation globale */
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* Réinitialisation globale */
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* Réinitialisation globale */
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* Ajout d'un espace de 1 cm entre les sections */
-section {
-    margin-bottom: 1cm;
-}
-
-/* Section avec fond sombre */
-#electricite {
-    width: 100%; /* Prend toute la largeur de la fenêtre */
-    background-color: rgba(0, 0, 0, 0.6); /* Fond sombre */
+/* Calculette */
+.calculator {
+    background-color: black;
+    color: white;
     padding: 20px;
-    color: white; /* Texte blanc */
+    border-radius: 10px;
+    text-align: center;
+    width: 100%; /* La calculette prend la largeur disponible */
+    margin-top: 20px;
+}
+
+/* Header de la calculette */
+.calculator-header {
     display: flex;
-    flex-direction: column; /* Texte en haut, images en bas */
-    gap: 20px; /* Espace entre le texte et les images */
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
 }
 
-/* Texte justifié */
-#electricite .texte h2, 
-#electricite .texte h3, 
-#electricite .texte p {
-    text-align: justify;
-    margin: 0; /* Supprime les marges internes pour éviter un décalage inattendu */
+.calculator-header .attention-icon {
+    width: 30px;
+    height: auto;
 }
 
-/* Images alignées horizontalement */
-#electricite .images {
+.calculator-header h3 {
+    color: orange;
+    margin: 0;
+}
+
+/* Formulaire de la calculette */
+.calculator-form {
     display: flex;
-    justify-content: center; /* Aligne les images au centre */
-    gap: 20px; /* Espace entre les images */
+    flex-direction: column;
+    gap: 10px;
 }
 
-#electricite .images img {
-    width: 30%; /* Chaque image prend 30% de la largeur de la section */
-    max-width: 200px; /* Limite la largeur maximale des images */
-    height: auto; /* Conserve les proportions des images */
-    border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombre */
+/* Résultats */
+.result {
+    margin-top: 20px;
+    text-align: left;
+    color: white;
 }
 
-/* Design adaptatif pour écrans larges */
-@media (min-width: 768px) {
-    #electricite {
-        padding: 40px;
-    }
+/* Style des boutons */
+button {
+    padding: 10px;
+    background-color: orange;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
+/* Style général du conteneur de contact */
+.contact {
+    text-align: center;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 1);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1000px;
+}
 
+/* Style du titre */
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+/* Conteneur des icônes de contact */
+.contact-icons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Espacement entre les images */
+    flex-wrap: wrap; /* Permet de s'assurer que si l'écran est petit, les icônes passeront à la ligne suivante */
+}
+
+/* Style de chaque bloc de contact */
+.contact-icons div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%; /* Pour avoir 4 éléments alignés */
+    text-align: center;
+}
+
+/* Style des images (petit format) */
+.contact-icons img {
+    width: 1cm; /* Largeur fixée à 0.5cm */
+    height: 1cm; /* Hauteur fixée à 0.5cm */
+    object-fit: contain; /* Maintient les proportions de l'image */
+    margin-bottom: 10px;
+}
+
+/* Style des textes (spans et paragraphes) */
+.contact-icons span {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.contact-icons p {
+    margin-top: 5px;
+    font-size: 14px;
+}
 
 
     </style>
@@ -377,7 +528,7 @@ section {
     </div>
 
     <!-- Bouton -->
-    <a href="./choix.html" class="btn-retour">Revenir au choix</a>
+    <a href="./choix.html" class="btn-retour"></a>
     
 
     <div class="intro" id="intro">
@@ -420,35 +571,9 @@ section {
     
     
     
-    <section id="adoucisseur" 
-        <!-- Texte à droite -->
-       
-            <h2>Adoucisseurs sans sel : une solution écologique contre le calcaire</h2>
-            <p>
-                Les adoucisseurs sans sel sont une alternative innovante et écologique pour lutter contre le calcaire dans vos installations 
-                 et préservent les minéraux essentiels de l'eau. 
-                Idéal pour protéger vos équipements ménagers et améliorer la qualité de l'eau.
-                Faites le choix d'une eau plus douce.
-            </p>
-        </div>
-        <!-- Images en dessous -->
-        <div style="display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap; margin-right: 5%;">
-            <img src="adou.jpeg" alt="Adoucisseur 3" style="width: 30%; height: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
-            <img src="ad.jpeg" alt="Adoucisseur 1" style="width: 30%; height: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
-            <img src="ado.jpeg" alt="Adoucisseur 2" style="width: 30%; height: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
-            
-        </div>
-    </section>
-    
-    
-    
-    
-    
-    
-    
     <section id="electricite">
         <!-- Texte -->
-        <div>
+        <div class="texte">
             <h2>Électricité</h2>
             <h3>Installations sécurisées</h3>
             <p>
@@ -471,29 +596,30 @@ section {
     
     
     
+
     
 
-    <section id="ventilation" style="margin: 20px auto 20px auto; padding: 20px; background-color: rgba(0, 0, 0, 0.6); border-radius: 10px; max-width: 800px; margin-left: auto; margin-right: 10%;">
-        <div style="display: flex; align-items: center; justify-content: space-between;">
-            <img src="ven.jpeg" alt="Ventilation gauche" style="width: 200px; height: auto; border-radius: 10px;">
-            <div style="flex-grow: 1; margin: 0 20px;">
-                <h2>Ventilation</h2>
-                <h3>Confort et qualité d'air</h3>
-                <p>
-                    Respirez un air sain grâce à nos solutions de ventilation performantes. 
-                    Maintenez une qualité de l’air optimale dans votre habitat. Bienfait Energies garantit un renouvellement d’air efficace et économique.
-                </p>
-            </div>
-            <img src="vent.jpeg" alt="Ventilation droite" style="width: 200px; height: auto; border-radius: 10px;">
+
+    <section id="ventilation">
+        <div class="text-container">
+            <h2>Ventilation</h2>
+            <h3>Confort et qualité d'air</h3>
+            <p>
+                Respirez un air sain grâce à nos solutions de ventilation performantes. 
+                Maintenez une qualité de l’air optimale dans votre habitat. Bienfait Energies garantit un renouvellement d’air efficace et économique.
+            </p>
+        </div>
+        <div class="image-container">
+            <img src="ven.jpeg" alt="Ventilation gauche">
+            <img src="vent.jpeg" alt="Ventilation droite">
         </div>
     </section>
     
     
     
 
-    <section id="climatisation" style="display: flex; align-items: center; margin: 20px auto; max-width: 1000px; background-color: rgba(0, 0, 0, 0.6); border-radius: 10px; padding: 20px;">
-        <!-- Texte à gauche -->
-        <div style="flex: 2; margin-left: 10%; margin-right: 20px;">
+    <section id="climatisation">
+        <div class="text-container">
             <h2>Climatisation</h2>
             <h3>Confort en toutes saisons</h3>
             <p>
@@ -502,15 +628,14 @@ section {
                 parfaitement adapté à vos besoins et à votre espace.
             </p>
         </div>
-        <!-- Image à droite -->
-        <div style="flex: 1;">
-            <img src="clim.jpeg" alt="Climatisation" style="width: 100%; height: auto; max-width: 300px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
+        <div class="image-container">
+            <img src="clim.jpeg" alt="Climatisation">
         </div>
     </section>
     
-    <section id="maintenance" style="display: flex; align-items: flex-start; margin-bottom: 50px; background-color: rgba(0, 0, 0, 0.6); border-radius: 10px; padding: 20px; max-width: 900px;">
-        <!-- Texte principal à gauche -->
-        <div style="flex: 2; margin-right: 20px;">
+    
+    <section id="maintenance">
+        <div class="text-container">
             <h2>Maintenance après installation</h2>
             <h3>Service réactif</h3>
             <p>
@@ -523,19 +648,18 @@ section {
                 Nous vérifions vos installations pour garantir leur fonctionnement optimal et prévenir les pannes futures.
             </p>
         </div>
-        <!-- Image à droite -->
-        <div style="flex: 1; display: flex; flex-direction: column; align-items: flex-start;">
-            <img src="mane.jpeg" alt="Maintenance après dépannage" 
-                 style="width: 100%; max-width: 300px; height: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
+        <div class="image-container">
+            <img src="mane.jpeg" alt="Maintenance après dépannage">
         </div>
     </section>
+    
 
     
     
     
-    <section id="solar-installation" style="margin: 20px auto; padding: 20px; background-color: rgba(0, 0, 0, 0.6); border-radius: 10px; max-width: 1000px; color: white;"> 
+    <section id="solar-installation">
         <!-- Texte explicatif -->
-        <div style="text-align: justify; margin-bottom: 20px;">
+        <div class="text-container">
             <h2>Installation de panneaux solaires</h2>
             <p>
                 Chez Bienfait Energies, nous proposons des solutions adaptées pour installer des panneaux solaires
@@ -549,67 +673,58 @@ section {
             </p>
         </div>
     
-        <!-- Conteneur principal -->
-        <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 20px;">
+        <!-- Conteneur des images -->
+        <div class="image-container">
             <!-- Image à gauche -->
-            <img src="pano.jpeg" alt="Image de panneaux solaires à gauche" 
-                 style="width: 25%; height: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
-    
-            <!-- Calculette au centre -->
-            <div id="solar-calculator" style="flex: 1; background-color: black; color: white; padding: 20px; border-radius: 10px; text-align: center; max-width: 300px; margin: auto;">
-                <!-- Titre avec image -->
-                <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px; gap: 10px;">
-                    <img src="https://www.pinclipart.com/picdir/middle/74-743387_attention-panneau-de-signalisation-attention-clipart.png" alt="Attention" style="width: 30px; height: auto;">
-                    <h3 style="color: orange; margin: 0;">ESTIMATION !!</h3>
-                </div>
-    
-                <h3>Calculette de rentabilité</h3>
-                <form id="calculator-form" style="display: flex; flex-direction: column; gap: 10px;">
-                    <!-- Type de panneau -->
-                    <label for="panel-type">Type de panneau :</label>
-                    <select id="panel-type" style="padding: 5px;">
-                        <option value="100">100W</option>
-                        <option value="435">435W</option>
-                    </select>
-    
-                    <!-- Nombre de panneaux -->
-                    <label for="panel-count">Nombre de panneaux :</label>
-                    <input type="number" id="panel-count" value="1" min="1" style="padding: 5px;">
-    
-                    <!-- Prix du kWh -->
-                    <label for="price-kwh">Prix du kWh (€) :</label>
-                    <input type="number" id="price-kwh" value="0.17" min="0" step="0.01" style="padding: 5px;">
-    
-                    <!-- Période -->
-                    <label for="period">Période :</label>
-                    <select id="period" style="padding: 5px;">
-                        <option value="day">Jour</option>
-                        <option value="week">Semaine</option>
-                        <option value="month">Mois</option>
-                    </select>
-    
-                    <!-- Saison -->
-                    <label for="season">Saison :</label>
-                    <select id="season" style="padding: 5px;">
-                        <option value="summer">Été</option>
-                        <option value="winter">Hiver</option>
-                        <option value="spring">Printemps</option>
-                        <option value="autumn">Automne</option>
-                    </select>
-    
-                    <!-- Bouton calculer -->
-                    <button type="button" onclick="calculateProfit()" style="padding: 10px; background-color: orange; color: black; border: none; border-radius: 5px; cursor: pointer;">Calculer</button>
-                </form>
-    
-                <!-- Résultats -->
-                <div id="result" style="margin-top: 20px; text-align: left; color: white;"></div>
-            </div>
+            <img src="pano.jpeg" alt="Image de panneaux solaires à gauche" class="image-left">
     
             <!-- Image à droite -->
-            <img src="panl.jpeg" alt="Image de panneaux solaires à droite" 
-                 style="width: 25%; height: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
+            <img src="panl.jpeg" alt="Image de panneaux solaires à droite" class="image-right">
+        </div>
+    
+        <!-- Calculette -->
+        <div id="solar-calculator" class="calculator">
+            <div class="calculator-header">
+                <img src="https://www.pinclipart.com/picdir/middle/74-743387_attention-panneau-de-signalisation-attention-clipart.png" alt="Attention" class="attention-icon">
+                <h3>ESTIMATION !!</h3>
+            </div>
+            <h3>Calculette de rentabilité</h3>
+            <form id="calculator-form" class="calculator-form">
+                <label for="panel-type">Type de panneau :</label>
+                <select id="panel-type">
+                    <option value="100">100W</option>
+                    <option value="435">435W</option>
+                </select>
+    
+                <label for="panel-count">Nombre de panneaux :</label>
+                <input type="number" id="panel-count" value="1" min="1">
+    
+                <label for="price-kwh">Prix du kWh (€) :</label>
+                <input type="number" id="price-kwh" value="0.17" min="0" step="0.01">
+    
+                <label for="period">Période :</label>
+                <select id="period">
+                    <option value="day">Jour</option>
+                    <option value="week">Semaine</option>
+                    <option value="month">Mois</option>
+                </select>
+    
+                <label for="season">Saison :</label>
+                <select id="season">
+                    <option value="summer">Été</option>
+                    <option value="winter">Hiver</option>
+                    <option value="spring">Printemps</option>
+                    <option value="autumn">Automne</option>
+                </select>
+    
+                <button type="button" onclick="calculateProfit()">Calculer</button>
+            </form>
+    
+            <div id="result" class="result"></div>
         </div>
     </section>
+    
+    
     
     <script>
         function calculateProfit() {
@@ -656,38 +771,40 @@ section {
     
     
     
+<div class="contact">
+    <h2>Contactez-nous</h2>
+    <div class="contact-icons">
+        <div>
+            <a href="tel:+0487077948" target="_blank">
+                <img src="https://img.freepik.com/premium-vector/phone-call-icon-vector-illustration-design-telephone_373520-4523.jpg?w=1380" alt="Téléphone">
+                <span>Appeler</span>
+            </a>
+            <p>0486804407</p>
+        </div>
+        <div>
+            <a href="mailto:bienfaitenergie@gmail.com" target="_blank">
+                <img src="https://logos-download.com/wp-content/uploads/2016/05/Gmail_logo_icon-700x531.png" alt="Mail">
+                <span>Email</span>
+            </a>
+            <p>bienfait.energies@gmail.com</p>
+        </div>
+        <div>
+            <a href="https://www.instagram.com/bienfaitenergies" target="_blank">
+                <img src="https://www.edigitalagency.com.au/wp-content/uploads/new-Instagram-icon-png-full-colour.png" alt="Instagram">
+                <span>Instagram</span>
+            </a>
+            <p>Bienfait Energies</p>
+        </div>
+        <div>
+            <a href="https://www.facebook.com/bienfaitenergies" target="_blank">
+                <img src="https://cdn.pixabay.com/photo/2016/11/06/09/54/facebook-1802605__480.png" alt="Facebook">
+                <span>Facebook</span>
+            </a>
+            <p>Bienfait Energies</p>
+        </div>
+    </div>
+</div>
 
-    <div class="contact">
-        <h2>Contactez-nous</h2>
-        <div class="contact-icons">
-            <div>
-                <a href="tel:+0487077948" target="_blank">
-                    <img src="https://img.freepik.com/premium-vector/phone-call-icon-vector-illustration-design-telephone_373520-4523.jpg?w=1380" alt="Téléphone">
-                    <span>Appeler</span>
-                </a>
-                <p>0486804407</p>
-            </div>
-            <div>
-                <a href="mailto:bienfaitenergie@gmail.com" target="_blank">
-                    <img src="https://logos-download.com/wp-content/uploads/2016/05/Gmail_logo_icon-700x531.png" alt="Mail">
-                    <span>Email</span>
-                </a>
-                <p>bienfait.energies@gmail.com</p>
-            </div>
-            <div>
-                <a href="https://www.instagram.com/bienfaitenergies" target="_blank">
-                    <img src="https://www.edigitalagency.com.au/wp-content/uploads/new-Instagram-icon-png-full-colour.png" alt="Instagram">
-                    <span>Instagram</span>
-                </a>
-                <p>Bienfait Energies</p>
-            </div>
-            <div>
-                <a href="https://www.facebook.com/bienfaitenergies" target="_blank">
-                    <img src="https://cdn.pixabay.com/photo/2016/11/06/09/54/facebook-1802605__480.png" alt="Facebook">
-                    <span>Facebook</span>
-                </a>
-                <p>Bienfait Energies</p>
-            </div>
         </div>
     </div>
     <footer style="display: flex; align-items: center; justify-content: center; gap: 10px;">
@@ -713,5 +830,15 @@ section {
 
         window.onload = typeWriter;
     </script>
+    <script>
+    // Fonction pour naviguer vers une section spécifique
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+</script>
+    
 </body>
 </html>
