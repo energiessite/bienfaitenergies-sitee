@@ -9,19 +9,21 @@
 body {
     background-image: url('fomm.jpeg'); /* Chemin vers votre image */
     background-size: cover; /* L'image couvre toute la page */
-    background-position: center; /* Centre l'image sur la page */
+    background-position: center center; /* Centre l'image sur la page */
     background-repeat: no-repeat; /* Empêche l'image de se répéter */
+    background-attachment: fixed; /* L'image reste fixe lors du défilement */
     margin: 0; /* Retirer les marges par défaut */
     padding: 0; /* Retirer les paddings par défaut */
-    height: 100vh; /* Assure que la hauteur du fond est égale à celle de la fenêtre */
+    height: 100%; /* La hauteur du fond couvre toute la hauteur du viewport */
+    width: 100%; /* La largeur du fond couvre toute la largeur du viewport */
 }
 
-/* Fixe le fond sur les appareils de bureau */
-@media (min-width: 768px) {
-    body {
-        background-attachment: fixed; /* Fixe l'image en arrière-plan pour qu'elle ne bouge pas */
-    }
+/* Style général pour le contenu de la page */
+.main-content {
+    position: relative; /* Le contenu reste au-dessus du fond */
+    z-index: 1; /* Le contenu est affiché au-dessus de l'image */
 }
+
 
 /* Pour les petits écrans comme les téléphones, on ne fixe pas le fond pour éviter des problèmes de performance */
 @media (max-width: 767px) {
